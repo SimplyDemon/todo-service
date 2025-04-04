@@ -4,7 +4,7 @@
     >
         {{ $single->title }}
     </a>
-    @if($single->tags)
+    @if(!$single->tags->isEmpty())
         @foreach($single->tags as $tag)
             <span class="badge bg-primary">{{$tag->name}}</span>
         @endforeach

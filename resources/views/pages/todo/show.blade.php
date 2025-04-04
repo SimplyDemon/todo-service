@@ -11,7 +11,7 @@
         <li class="list-group-item">
             Выполнено: {{$single->is_completed_readable}}
         </li>
-        @if($single->tags)
+        @if(!$single->tags->isEmpty())
             <li class="list-group-item">
             Теги:
             @foreach($single->tags as $tag)
